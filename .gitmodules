@@ -1,0 +1,6 @@
+[submodule "ext/ant-javacard"]
+	path = ext/ant-javacard
+	url = https://github.com/martinpaljak/ant-javacard.git
+[submodule "ext/sim-tools"]
+	path = ext/sim-tools
+	url = https://github.com/Shadytel/sim-tools.git

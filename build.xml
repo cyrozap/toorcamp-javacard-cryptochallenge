@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ToorCamp Crypto Challenge" default="dist" basedir=".">
+  <description>Builds the project.</description>
+  <target name="dist" description="generate the distribution">
+    <tstamp/>
+    <ant dir="ext/ant-javacard"/>
+    <taskdef name="javacard" classname="pro.javacard.ant.JavaCard" classpath="ext/ant-javacard/ant-javacard.jar"/>
+    <javacard jckit="ext/ant-javacard/sdks/jc212_kit">
+      <cap aid="d07002ca4490cc" package="org.toorcamp.CryptoChallenge" version="1.0" output="CryptoChallenge.cap" sources="src/org/toorcamp/CryptoChallenge">
+        <applet class="CryptoChallenge" aid="d07002ca4490cc01"/>
+        <import exps="ext/sim-tools/javacard/api21_export_files" jar="ext/sim-tools/javacard/lib/sim.jar"/>
+      </cap>
+    </javacard>
+  </target>
+</project>
